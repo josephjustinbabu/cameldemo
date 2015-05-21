@@ -12,4 +12,9 @@ public interface Greeter {
 	 * @return
 	 */
 	public String sayHello();
+	
+	/**
+	 * @param message
+	 */
+	public void messageFromJMS(String message);
 }

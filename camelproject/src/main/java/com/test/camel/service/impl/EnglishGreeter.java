@@ -18,5 +18,12 @@ public class EnglishGreeter implements Greeter {
 		// TODO Auto-generated method stub
 		return "Hello " + System.getProperty("user.name");
 	}
+	
+	/* (non-Javadoc)
+	 * @see com.test.camel.service.Greeter#messageFromJMS(java.lang.String)
+	 */
+	public void messageFromJMS(String message){
+		System.out.println("JMS message: " + message);
+	}
 
 }
