@@ -22,8 +22,8 @@ public class EnglishGreeter implements Greeter {
 	/* (non-Javadoc)
 	 * @see com.test.camel.service.Greeter#messageFromJMS(java.lang.String)
 	 */
-	public void messageFromJMS(String message){
-		System.out.println("JMS message: " + message);
+	public String messageFromJMS(String message){
+		return  message;
 	}
 
 }

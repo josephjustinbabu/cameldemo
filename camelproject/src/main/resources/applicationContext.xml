@@ -33,12 +33,14 @@ http://www.springframework.org/schema/task/spring-task-3.2.xsd">
 	</bean>
 
 	<bean id="myGreeter" class="com.test.camel.service.impl.EnglishGreeter"/>
+	<bean id="myBuilder" class="com.test.camel.routes.MessageFromJMSRoute"/>
 	<bean id="greetMeBean" class="com.test.camel.service.impl.GreetMeBean">
 		<property name="greeter" ref="myGreeter"/>
 	</bean>
 	
-	<bean id="ftpToJmsRoute" class="camelinaction.FtpToJMSRoute"/>
-	<camelContext xmlns="http://camel.apache.org/schema/spring">
-		<routeBuilder ref="ftpToJmsRoute"/>
-	</camelContext>
+	<camel:camelContext id="camel5" xmlns="http://camel.apache.org/schema/spring" typeConverterStatisticsEnabled="true">
+    	<routeBuilder ref="myBuilder" />
+  	</camel:camelContext>
+   
+  
 </beans>

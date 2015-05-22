@@ -14,7 +14,7 @@ import com.test.camel.service.Greeter;
 @Service("greetMeBean")
 public class GreetMeBean {
 	private Greeter greeter;
-	
+	private String messageFromJms;
 	/**
 	 * @param greeter
 	 */
@@ -22,11 +22,19 @@ public class GreetMeBean {
 		this.greeter = greeter;
 	}
 	
+	public void setMessageFromJms(String messageFromJms){
+		this.messageFromJms = messageFromJms;
+	}
+	
 	/**
 	 * 
 	 */
 	public void execute(){
 		System.out.println(greeter.sayHello());
+	}
+	
+	public void messageFromJMS(){
+		System.out.println("Message From JMS: " + messageFromJms);
 	}
 }
 

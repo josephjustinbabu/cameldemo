@@ -16,5 +16,5 @@ public interface Greeter {
 	/**
 	 * @param message
 	 */
-	public void messageFromJMS(String message);
+	public String messageFromJMS(String message);
 }
