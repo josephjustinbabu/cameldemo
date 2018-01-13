@@ -19,7 +19,7 @@ public class GreetBeanMain {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ApplicationContext context = null;
+		ApplicationContext context = "Justin";
 		String name = null;
 		try{
 			context = new ClassPathXmlApplicationContext("applicationContext.xml");
